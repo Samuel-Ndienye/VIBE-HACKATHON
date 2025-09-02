@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS mood_journal;
+
+USE mood_journal;
+
+CREATE TABLE IF NOT EXISTS entries (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    text TEXT NOT NULL,
+    sentiment VARCHAR(50),
+    score FLOAT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
